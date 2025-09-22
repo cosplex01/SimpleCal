@@ -10,6 +10,7 @@
 
 namespace WpfSimpleCal.Properties {
     using System;
+    using System.Windows.Media.Imaging;
     
     
     /// <summary>
@@ -22,7 +23,7 @@ namespace WpfSimpleCal.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resources {
+    internal class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +37,7 @@ namespace WpfSimpleCal.Properties {
         ///   이 클래스에서 사용하는 캐시된 ResourceManager 인스턴스를 반환합니다.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WpfSimpleCal.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +52,7 @@ namespace WpfSimpleCal.Properties {
         ///   재정의합니다.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,12 +62,12 @@ namespace WpfSimpleCal.Properties {
         }
         
         /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        ///   System.Windows.Media.Imaging.BitmapImage 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap radiyuSD {
+        internal static BitmapImage radiyuSD {
             get {
                 object obj = ResourceManager.GetObject("radiyuSD", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return obj as BitmapImage;
             }
         }
     }
