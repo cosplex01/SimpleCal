@@ -5,35 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfSimpleCal"
         mc:Ignorable="d"
-        Title="SimpleCalCulate" Height="680" Width="1200">
+        Title="SimpleCalCulate" Height="850" Width="1200">
     <Grid Background="#47489a">
         <Grid.ColumnDefinitions >
-            <ColumnDefinition Width="347*" />
-            <ColumnDefinition Width="395*"/>
-            <ColumnDefinition Width="458*"/>
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Border BorderBrush="Green" BorderThickness="4" Height="644" VerticalAlignment="Center" Margin="10,0,10,0" Grid.ColumnSpan="3">
-            <Grid Margin="0,6,0,92">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="5*"/>
-                    <RowDefinition Height="533*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="68*"/>
-                    <ColumnDefinition Width="218*"/>
-                    <ColumnDefinition Width="72*"/>
-                    <ColumnDefinition Width="29*"/>
-                    <ColumnDefinition Width="72*"/>
-                    <ColumnDefinition Width="87*"/>
-                    <ColumnDefinition Width="626*"/>
-                </Grid.ColumnDefinitions>
-                <Image RenderTransformOrigin="-4.127,0.425" Margin="2,1,62,248" Name="MainIcon"  Source="/radiyuSD.png" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
-                <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="64,2,0,0" FontSize="36" FontStyle="Oblique" FontFamily="OngleipParkDahyeon" Foreground="White" Height="285" Width="812" Grid.ColumnSpan="5" Grid.Column="2" Grid.Row="1">
-                    <TextBlock Text="Simple 하게 Detect 하게 보여줍니다
-                               라디유의 이미지를 이용해서 심플하게 보이고자 했습니다" TextWrapping="Wrap" FontFamily="OngleipParkDahyeon"/>
-                </Label>
-                <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,302,10,-14" Grid.ColumnSpan="7" Grid.Row="1"/>
-            </Grid>
+        <Border BorderBrush="Green" BorderThickness="4" Height="814" VerticalAlignment="Center" Margin="10,10,10,10">
+            <Image Height="289" Width="294" RenderTransformOrigin="-4.127,0.425" Margin="2,6,876,511" Name="MainIcon"  Source="/radiyuSD.png"/>
         </Border>
+
     </Grid>
 </Window>
