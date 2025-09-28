@@ -11,7 +11,17 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Border BorderBrush="Green" BorderThickness="4" Height="814" VerticalAlignment="Center" Margin="10,10,10,10">
+<<<<<<< HEAD
             <Image Height="289" Width="294" RenderTransformOrigin="-4.127,0.425" Margin="2,6,876,511" Name="MainIcon"  Source="/radiyuSD.png"/>
+=======
+            <StackPanel HorizontalAlignment="Left" Margin="6,6,0,0" Orientation="Vertical" VerticalAlignment="Top">
+                <Image Height="300" Width="300" RenderTransformOrigin="-4.127,0.425" x:Name="MainIcon" Source="/radiyuSD.png" Stretch="Fill" Cursor="Arrow">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="/radiyuSD.png" TileMode="Tile" Opacity="1"/>
+                    </Image.OpacityMask>
+                </Image>
+            </StackPanel>
+>>>>>>> ecd113a4004b9251b4f52368e18bc3a631488d4b
         </Border>
 
     </Grid>
