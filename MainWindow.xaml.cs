@@ -22,11 +22,7 @@ namespace WpfSimpleCal
         public MainWindow()
         {
             InitializeComponent();
-<<<<<<< HEAD
-            MainIcon.Source = new BitmapImage(new Uri("pack://application:,,,/radiyuSD.png"));            
-=======
             MainIcon.Source = new BitmapImage(new Uri("/radiyuSD.png", UriKind.RelativeOrAbsolute));
->>>>>>> ecd113a4004b9251b4f52368e18bc3a631488d4b
         }
     }
 }

@@ -59,9 +59,6 @@ namespace WpfSimpleCal.Properties {
             set {
                 resourceCulture = value;
             }
-<<<<<<< HEAD
-        }               
-=======
         }
         
         /// <summary>
@@ -73,6 +70,6 @@ namespace WpfSimpleCal.Properties {
                 return obj as BitmapImage;
             }
         }
->>>>>>> ecd113a4004b9251b4f52368e18bc3a631488d4b
+
     }
 }
