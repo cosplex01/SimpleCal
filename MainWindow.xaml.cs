@@ -1,5 +1,6 @@
-﻿using System.Text;
-using System.Drawing;
+﻿using System.Drawing;
+using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -9,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WpfSimpleCal
 {
@@ -20,7 +22,7 @@ namespace WpfSimpleCal
         public MainWindow()
         {
             InitializeComponent();
-            MainIcon.Source = new BitmapImage(new Uri("pack://application:,,,/Resources/radiyuSD"));
+            MainIcon.Source = new BitmapImage(new Uri("pack://application:,,,/radiyuSD.png"));            
         }
     }
 }

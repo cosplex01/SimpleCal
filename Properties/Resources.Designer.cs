@@ -58,16 +58,6 @@ namespace WpfSimpleCal.Properties {
             set {
                 resourceCulture = value;
             }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        public static System.Drawing.Bitmap radiyuSD {
-            get {
-                object obj = ResourceManager.GetObject("radiyuSD", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
+        }               
     }
 }
