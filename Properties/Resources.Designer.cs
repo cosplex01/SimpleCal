@@ -10,7 +10,6 @@
 
 namespace WpfSimpleCal.Properties {
     using System;
-    using System.Windows.Media.Imaging;
     
     
     /// <summary>
@@ -62,14 +61,33 @@ namespace WpfSimpleCal.Properties {
         }
         
         /// <summary>
-        ///   System.Windows.Media.Imaging.BitmapImage 형식의 지역화된 리소스를 찾습니다.
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static BitmapImage radiyuSD {
+        internal static System.Drawing.Bitmap radiyuSD {
             get {
                 object obj = ResourceManager.GetObject("radiyuSD", resourceCulture);
-                return obj as BitmapImage;
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap SCloseButton {
+            get {
+                object obj = ResourceManager.GetObject("SCloseButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap SearchButton {
+            get {
+                object obj = ResourceManager.GetObject("SearchButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

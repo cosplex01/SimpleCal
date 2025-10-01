@@ -23,6 +23,19 @@ namespace WpfSimpleCal
         {
             InitializeComponent();
             MainIcon.Source = new BitmapImage(new Uri("/radiyuSD.png", UriKind.RelativeOrAbsolute));
+            Searchbtn.Source = new BitmapImage(new Uri("/SearchButton.png", UriKind.RelativeOrAbsolute));
+            BtnRadiyuSearch = new Button
+            {
+                Content = "Search Radiyu",
+                Width = 330,
+                Height = 150,
+                Margin = new Thickness(10)
+            };
+        }
+
+        private void BtnRadiyu1_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
