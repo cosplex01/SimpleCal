@@ -3,35 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfSimpleCal"
-        xmlns:Properties="clr-namespace:WpfSimpleCal.Properties" x:Class="WpfSimpleCal.MainWindow"
+        xmlns:local="clr-namespace:WpfSimpleCal"                
+        xmlns:Properties="clr-namespace:WpfSimpleCal.Properties"
+        x:Class="WpfSimpleCal.MainWindow"
         mc:Ignorable="d"
-        
-        Title="SimpleCalCulate" Height="850" Width="1150" ResizeMode="NoResize">
-    <Grid Background="#47489a">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>            
-        </Grid.ColumnDefinitions>
-        <Border BorderBrush="Green" BorderThickness="4" Height="814" VerticalAlignment="Center" Margin="10,0,10,0">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <StackPanel x:Name="ST1" HorizontalAlignment="Left" Margin="6,6,0,0" Orientation="Vertical" VerticalAlignment="Top" Grid.Column="0">
-                    <Image Height="300" Width="300" RenderTransformOrigin="-4.127,0.425" x:Name="MainIcon" Source="/radiyuSD.png" Stretch="Fill" Cursor="Arrow"/>
-                    <Button x:Name="BtnRadiyuSearch" Height="150" Width="418" HorizontalAlignment="Center" Margin="0,0,0,0" Click="BtnRadiyu1_Click" RenderTransformOrigin="0.447,0.513" Background="#47489a">
-                        <Image Height="150" Width="418" RenderTransformOrigin="-4.127,0.425" x:Name="Searchbtn" Source="/SearchButton.png" Stretch="Fill" Cursor="Arrow"/>
-                    </Button>
-                </StackPanel>
-                <StackPanel x:Name="ST2" HorizontalAlignment="Right" Margin="6,6,0,0" Orientation="Vertical" VerticalAlignment="Top" Grid.Column="1">
-                    <ListBox x:Name="LBRadiyu1" d:ItemsSource="{d:SampleData ItemCount=5}" Height="302" FontFamily="궁서" FontSize="25" Background="#4b7ebd" FontWeight="Bold" Width="670"/>
-                    <Button x:Name="BtnRadiyuCloseSelect" Height="150" Width="467" HorizontalAlignment="Center" Margin="0,0,0,0" Click="BtnRadiyu1_Click" RenderTransformOrigin="0.447,0.513" Background="#47489a">
-                        <Image Height="150" Width="467" RenderTransformOrigin="-4.127,0.425" x:Name="Closebtn" Source="/SCloseButton.png" Stretch="Fill" Cursor="Arrow"/>
-                    </Button>
-                </StackPanel>
-            </Grid>
-        </Border>
+        d:DataContext="{d:DesignInstance Type=local:MainView}"
+        Title="MainWindow" Height="700" Width="1150" ResizeMode="NoResize">
+    <Grid>
+        <local:MainView HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
 </Window>
