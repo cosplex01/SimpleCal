@@ -5,18 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfSimpleCal"        
         mc:Ignorable="d"
-        d:DataContext="{d:DesignInstance Type=local:MainView,IsDesignTimeCreatable=True}"
+        d:DataContext="{d:DesignInstance Type=local:MainViewModel,IsDesignTimeCreatable=True}"
         Height="600" Width="900">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="150"/>            
-            <RowDefinition Height="*"/>            
+            <RowDefinition Height="190"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <!--위쪽 열 부분에 대한 디자인 -->
-        <Border BorderThickness="4" Background="Aquamarine">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
-                <Image Source="{Binding MainIcon}" Width="150" Height="150"/>
-            </StackPanel>
+        <Border Grid.Row="0" BorderThickness="2" Background="Aquamarine" Margin="10,10,20,10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center" >
+                <StackPanel>
+                    <Image Source="{Binding MainIcon}" Width="150" Height="150"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <TextBlock Text="메모리 리스트 확인" FontSize="25" FontWeight="Bold" FontFamily="Hancom MalangMalang Bold" Height="31"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
+                    <Image Source="{Binding Searchbtn}" Width="218" Height="149"/>
+                    <Image Source="{Binding Closebtn}" Width="247" Height="149"/>
+                </StackPanel>
+            </StackPanel>            
+        </Border>
+        <Border Grid.Row="1" BorderThickness="2" Background="LightCyan" Margin="10,10,20,10">
+            <DataGrid ItemsSource="{Binding MemoryItems}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" Margin="10">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ProgramID" Binding="{Binding Id}" Width="100"/>
+                    <DataGridTextColumn Header="ProgramName" Binding="{Binding Name}" Width="450"/>
+                    <DataGridTextColumn Header="ViewTime" Binding="{Binding Value}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </Border>
     </Grid>
 </UserControl>

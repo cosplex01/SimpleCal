@@ -32,9 +32,9 @@ namespace WpfSimpleCal
         }
 
         // 3. Command 속성 정의
-        public ICommand AddItemCommand { get; private set; }
-        public ICommand ReloadMemoryCommand { get; } // 메모리 확인 Command (이전 논의)
-        public ICommand RemoveSelectedCommand { get; } // 선택 항목 제거 Command (이전 논의)
+        public ICommand? AddItemCommand { get; private set; }
+        public ICommand? ReloadMemoryCommand { get; } // 메모리 확인 Command (이전 논의)
+        public ICommand? RemoveSelectedCommand { get; } // 선택 항목 제거 Command (이전 논의)
 
         // 4. ImageSource 속성 정의
         private ImageSource? _mainIcon;
