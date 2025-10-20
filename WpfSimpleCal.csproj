@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ClearList.png" />
     <None Remove="Properties\radiyuSD.png" />
     <None Remove="radiyuSD.png" />
     <None Remove="SCloseButton.png" />
@@ -25,6 +26,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.9" />
     <PackageReference Include="ReactiveUI" Version="22.1.1" />
     <PackageReference Include="System.Drawing.Common" Version="9.0.9" />
+    <Resource Include="ClearList.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
        
     <Resource Include="radiyuSD.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

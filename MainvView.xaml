@@ -22,17 +22,21 @@
                     <TextBlock Text="메모리 리스트 확인" FontSize="25" FontWeight="Bold" FontFamily="Hancom MalangMalang Bold" Height="31"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
-                    <Image Source="{Binding Searchbtn}" Width="218" Height="149"/>
-                    <Image Source="{Binding Closebtn}" Width="247" Height="149"/>
+                    <Button Width="218" Height="85" Command="{Binding ReloadMemoryCommand}" BorderThickness="0" BorderBrush="Transparent">
+                        <Image Source="{Binding Searchbtn}" Width="218" Height="79"/>
+                    </Button>
+                    <Button Width="167" Height="85" Command="{Binding ClearListboxCommand}" BorderThickness="0" BorderBrush="Transparent">
+                        <Image Source="{Binding ClearList}" Width="167" Height="79"/>
+                    </Button>
                 </StackPanel>
             </StackPanel>            
         </Border>
         <Border Grid.Row="1" BorderThickness="2" Background="LightCyan" Margin="10,10,20,10">
-            <DataGrid ItemsSource="{Binding MemoryItems}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" Margin="10">
+            <DataGrid ItemsSource="{Binding ProcessQueue}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" Margin="10">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ProgramID" Binding="{Binding Id}" Width="100"/>
-                    <DataGridTextColumn Header="ProgramName" Binding="{Binding Name}" Width="450"/>
-                    <DataGridTextColumn Header="ViewTime" Binding="{Binding Value}" Width="*"/>
+                    <DataGridTextColumn Header="ProgramID" Binding="{Binding ProcessId}" FontWeight="Bold" Width="100"/>
+                    <DataGridTextColumn Header="ProgramName" Binding="{Binding ProgramName, StringFormat=' ({0})'}" Width="450"/>
+                    <DataGridTextColumn Header="ViewTime" Binding="{Binding AddedTime, StringFormat='yyyy-MM-dd HH:mm:ss'}" Foreground="Gray" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Border>

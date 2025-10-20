@@ -8,8 +8,8 @@
         x:Class="WpfSimpleCal.MainWindow"
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance Type=local:MainView}"
-        Title="MainWindow" Height="700" Width="1150" ResizeMode="NoResize">
+        Title="MainWindow" Height="650" Width="900" ResizeMode="NoResize">
     <Grid>
-        <local:MainView HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <local:MainView HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="ForestGreen"/>
     </Grid>
 </Window>
