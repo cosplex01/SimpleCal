@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="ClearList.png" />
     <None Remove="Properties\radiyuSD.png" />
+    <None Remove="radiyu.ico" />
     <None Remove="radiyuSD.png" />
     <None Remove="SCloseButton.png" />
     <None Remove="SearchButton.png" />
@@ -27,19 +28,22 @@
     <PackageReference Include="ReactiveUI" Version="22.1.1" />
     <PackageReference Include="System.Drawing.Common" Version="9.0.9" />
     <Resource Include="ClearList.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="radiyu.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
        
     <Resource Include="radiyuSD.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
        
     <Resource Include="SCloseButton.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
        
     <Resource Include="SearchButton.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfSimpleCal"        
         mc:Ignorable="d"
-        d:DataContext="{d:DesignInstance Type=local:MainViewModel,IsDesignTimeCreatable=True}"
+        d:DataContext="{d:DesignInstance Type=local:MainViewModel,IsDesignTimeCreatable=True}"        
         Height="600" Width="900">
     <Grid>
         <Grid.RowDefinitions>

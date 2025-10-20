@@ -42,6 +42,7 @@ namespace WpfSimpleCal
         private ImageSource? _searchbtn;
         private ImageSource? _closebtn;
         private ImageSource? _clearlist;
+        private ImageSource? _titleicon;
         private ObservableCollection<modelMain.modelMain> processQueue = new ObservableCollection<modelMain.modelMain>();
 
         // Queue에 담긴 프로그램 리스트 (Listbox에 바인딩됨)
@@ -66,6 +67,11 @@ namespace WpfSimpleCal
             get => _clearlist;
             set { _clearlist = value; OnPropertyChanged(nameof(ClearList)); }
         }
+        public ImageSource? TitleIcon
+        {
+            get => _titleicon;
+            set { _titleicon = value; OnPropertyChanged(nameof(TitleIcon)); }
+        }
 
         // 5. 생성자 (모든 초기화 로직은 여기서 수행)
         public MainViewModel()
@@ -80,11 +86,14 @@ namespace WpfSimpleCal
                 Uri SearchbtImage = new Uri("pack://application:,,,/WpfSimpleCal;component/SearchButton.png");
                 Uri ClosebtnImage = new Uri("pack://application:,,,/WpfSimpleCal;component/SCloseButton.png");
                 Uri ClearListImage = new Uri("pack://application:,,,/WpfSimpleCal;component/ClearList.png");
+                Uri TitleIconImage = new Uri("pack://application:,,,/WpfSimpleCal;component/radiyu.ico");
 
                 MainIcon = new BitmapImage(MainIconImage);
                 Searchbtn = new BitmapImage(SearchbtImage);
                 Closebtn = new BitmapImage(ClosebtnImage);
                 ClearList = new BitmapImage(ClearListImage);
+                TitleIcon = new BitmapImage(TitleIconImage);
+
                 // 커맨드 초기화
                 AddItemCommand = new RelayCommand(ExecuteAddItem);
                 // 이전 논의의 Command 초기화:
