@@ -14,19 +14,22 @@
         </Grid.RowDefinitions>
         <!--위쪽 열 부분에 대한 디자인 -->
         <Border Grid.Row="0" BorderThickness="2" Background="Aquamarine" Margin="10,10,20,10">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center" >
-                <StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
                     <Image Source="{Binding MainIcon}" Width="150" Height="150"/>
                 </StackPanel>
-                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
                     <TextBlock Text="메모리 리스트 확인" FontSize="25" FontWeight="Bold" FontFamily="Hancom MalangMalang Bold" Height="31"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
-                    <Button Width="218" Height="85" Command="{Binding ReloadMemoryCommand}" BorderThickness="0" BorderBrush="Transparent">
-                        <Image Source="{Binding Searchbtn}" Width="218" Height="79"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="20,0,20,0" Width="490">
+                    <Button Width="100" Height="100" Command="{Binding ReloadMemoryCommand}" BorderThickness="0" BorderBrush="Transparent" Background="Transparent" Margin="20">
+                        <Image Source="{Binding Searchbtn}" Width="80" Height="80"/>
                     </Button>
-                    <Button Width="167" Height="85" Command="{Binding ClearListboxCommand}" BorderThickness="0" BorderBrush="Transparent">
-                        <Image Source="{Binding ClearList}" Width="167" Height="79"/>
+                    <Button Width="100" Height="100" Command="{Binding ClearListboxCommand}" BorderThickness="0" BorderBrush="Transparent" Background="Transparent" Margin="30">
+                        <Image Source="{Binding ClearList}" Width="80" Height="80"/>
+                    </Button>
+                    <Button Width="100" Height="100" Command="{Binding RemoveSelectedCommand}" BorderThickness="0" BorderBrush="Transparent" Background="Transparent" Margin="30">
+                        <Image Source="{Binding Closebtn}" Width="80" Height="80"/>
                     </Button>
                 </StackPanel>
             </StackPanel>            
