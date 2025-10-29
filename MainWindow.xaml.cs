@@ -24,6 +24,11 @@ namespace WpfSimpleCal
         public MainWindow()
         {
             InitializeComponent();            
-        }        
+        }
+
+        private void MainView_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

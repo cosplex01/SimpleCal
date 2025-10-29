@@ -10,6 +10,6 @@
         d:DataContext="{d:DesignInstance Type=local:MainView}"
         Title="MainWindow" Height="650" Width="900" ResizeMode="NoResize" Icon="{Binding TitleIcon}">
     <Grid>
-        <local:MainView HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="ForestGreen"/>
+        <local:MainView HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="ForestGreen" Loaded="MainView_Loaded"/>
     </Grid>
 </Window>

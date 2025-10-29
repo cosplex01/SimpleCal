@@ -28,6 +28,8 @@ namespace WpfSimpleCal
                 _selectedItem = value;
                 OnPropertyChanged(nameof(SelectedItem));
                 // 선택된 아이템 로직 처리 (예: 상세 정보 표시)
+                // ⭐️ 핵심 수정: 선택 상태가 변경되면 Command 상태를 즉시 재확인하도록 요청
+                CommandManager.InvalidateRequerySuggested();
             }
         }
 
@@ -72,7 +74,7 @@ namespace WpfSimpleCal
             get => _titleicon;
             set { _titleicon = value; OnPropertyChanged(nameof(TitleIcon)); }
         }
-
+        
         // 5. 생성자 (모든 초기화 로직은 여기서 수행)
         public MainViewModel()
         {
@@ -111,7 +113,7 @@ namespace WpfSimpleCal
                 Debug.WriteLine($"ViewModel 초기화 오류: {ex.Message}");
             }
         }
-
+        
         private void LoadInitialProcesses()
         {
             // 1. 기존 데이터를 모두 지웁니다. (화면 새로 고침 역할)
@@ -121,7 +123,7 @@ namespace WpfSimpleCal
             Process[] runningProcesses = Process.GetProcesses();
 
             // 2. 반복문을 사용하거나, LINQ를 사용하여 큐에 전부 담습니다.
-            foreach (var process in runningProcesses.OrderBy(p => p.ProcessName).Take(50)) // 50개만 예시로
+            foreach (var process in runningProcesses.OrderBy(p => p.ProcessName).Take(150)) // 50개만 예시로
             {
                 try
                 {
@@ -148,11 +150,6 @@ namespace WpfSimpleCal
         // 6. 로직 메서드 정의
         private void InitializeDefaultData()
         {
-            // 요구사항 1: 프로그램 시작 시 메모리 목록 로드
-            // 임시 데이터:
-            DataItems.Add(new modelMain.modelMain(name: "홍길동", id: 1, job: DateTime.UtcNow));
-            DataItems.Add(new modelMain.modelMain(name: "임꺽정", id: 2, job: DateTime.UtcNow));
-
             // 실제 메모리 로드 로직은 LoadInitialProcesses() 함수에서 수행해야 합니다.
         }
 
@@ -183,11 +180,26 @@ namespace WpfSimpleCal
         private void ExecuteRemoveSelected(object parameter)
         {
             // 선택 항목 제거 로직
+            if (SelectedItem != null)
+            {
+                try
+                {
+                    Process process = Process.GetProcessById(SelectedItem.ProcessId);
+                    process.Kill(); // ⭐️ 프로세스 강제 종료
+
+                    System.Diagnostics.Debug.WriteLine($"PID {SelectedItem.ProcessId} 프로세스 종료됨.");
+                }
+                catch (Exception ex)
+                {
+                    // 프로세스가 이미 종료되었거나 권한이 없는 경우 예외 처리
+                    System.Diagnostics.Debug.WriteLine($"PID {SelectedItem.ProcessId} 종료 실패: {ex.Message}");
+                }
+            }
             Debug.WriteLine("선택 항목 제거 명령 실행");
         }
         private bool CanExecuteRemoveSelected(object parameter)
         {
-            return SelectedItem != null; // 또는 SelectedProcesses.Any();
+            return SelectedItem != null; // 'Any()'은 modelMain에 정의되어 있지 않으므로 null 체크만 수행
         }
 
         // 7. INotifyPropertyChanged 구현
