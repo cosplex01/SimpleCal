@@ -1,3 +1,4 @@
+<H1>해당 프로젝트는 Windows기반의 WPF스타일로 제작되었습니다</H1>
 <b>1.0 버전 : 기본적인 구조설정 및 메모리 상에 있는 프로그램 목록을 표시 기능 지정 [메인 기능]</b><br>
 <img width="881" height="641" alt="버전1 0 화면" src="https://github.com/user-attachments/assets/12df1b06-254c-4509-a835-0c786b2349de"/><br>
 1.0버전 설치 파일 https://github.com/cosplex01/SimpleCal/releases/download/radiyu/Radiyu.msi
